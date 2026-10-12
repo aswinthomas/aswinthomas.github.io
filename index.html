@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Aswin Thomas Abraham — Solutions & Integration Engineer</title>
-<meta name="description" content="Aswin Thomas Abraham is a customer-facing engineer who turns complex platforms into working integrations. Solutions engineering at Google and Meta, based in Singapore.">
+<meta name="description" content="Aswin Thomas Abraham is a customer-facing engineer who turns complex platforms into working integrations. 100+ partner integrations at Google and Meta, 18 years shipping software. Singapore.">
 <meta property="og:title" content="Aswin Thomas Abraham — Solutions & Integration Engineer">
 <meta property="og:description" content="I sit between the customer and the code: scoping the problem, building the integration, and staying until it works in production.">
 <meta property="og:image" content="https://aswindev.com/images/profile.jpg">
@@ -46,6 +46,9 @@ h1 em{font-style:italic;color:var(--accent)}
 section{padding:72px 0;border-top:1px solid var(--line)}
 h2{font:500 32px/1.2 var(--serif);letter-spacing:-.01em;margin-bottom:12px}
 .sub{color:var(--muted);max-width:60ch;margin-bottom:40px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:0 0 64px}
+.stats strong{display:block;font:500 36px/1.1 var(--serif);color:var(--accent)}
+.stats span{font-size:14px;color:var(--muted)}
 .loop{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
 .loop div{background:var(--surface);padding:22px 18px}
 .loop b{display:block;font:500 12px var(--mono);color:var(--accent);margin-bottom:8px}
@@ -81,6 +84,7 @@ footer{padding:32px 0;color:var(--muted);font-size:14px;display:flex;justify-con
   .loop{grid-template-columns:1fr}
   .case,.timeline li{grid-template-columns:1fr;gap:12px}
   .grid3{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr 1fr}
   nav ul{gap:16px}
   nav ul li.hide-sm{display:none}
 }
@@ -102,7 +106,7 @@ footer{padding:32px 0;color:var(--muted);font-size:14px;display:flex;justify-con
     <div>
       <p class="eyebrow">Solutions · Integration · Forward-deployed engineering</p>
       <h1>I turn complex platforms into <em>integrations that actually ship.</em></h1>
-      <p class="lede">I'm Aswin Thomas Abraham, an engineer who works directly with customers and partners. I scope the real problem, design the architecture, write the code, and stay until it runs in production. I've done this for data platforms, messaging APIs and mapping data at Google and Meta, from Singapore across APAC.</p>
+      <p class="lede">I'm Aswin Thomas Abraham. I spent eight years building robots and autonomous vehicles, then moved to the customer side of engineering. Since then I've onboarded 100+ partners onto Google Maps, launched WhatsApp ads APIs with Meta's partners, and built a data platform that Google Cloud wrote a case study about. I scope the problem with the customer, write the code, and stay through launch.</p>
       <div class="cta">
         <a class="btn primary" href="https://www.linkedin.com/in/aswinta/">Talk to me on LinkedIn</a>
         <a class="btn" href="https://github.com/aswinthomas">See my code</a>
@@ -111,15 +115,22 @@ footer{padding:32px 0;color:var(--muted);font-size:14px;display:flex;justify-con
     <img class="portrait" src="images/profile.jpg" alt="Portrait of Aswin Thomas Abraham" width="200" height="200">
   </header>
 
+  <div class="stats">
+    <div><strong>100+</strong><span>partners and data providers launched</span></div>
+    <div><strong>1B+</strong><span>Maps users reached by pipelines I built</span></div>
+    <div><strong>−95%</strong><span>manual onboarding effort, through automation</span></div>
+    <div><strong>18 yrs</strong><span>shipping software, robotics to APIs</span></div>
+  </div>
+
   <section id="approach">
     <h2>How I work with customers</h2>
     <p class="sub">Most integrations don't fail on the code. They fail between the code and the people using it. I own the whole loop, so nothing gets lost in a handoff.</p>
     <div class="loop">
-      <div><b>01</b><h3>Discover</h3><p>Find the business outcome behind the technical request.</p></div>
-      <div><b>02</b><h3>Architect</h3><p>Design to the customer's real constraints: data, security, team.</p></div>
-      <div><b>03</b><h3>Build</h3><p>Prototype fast, then write production-grade pipelines and APIs.</p></div>
-      <div><b>04</b><h3>Launch</h3><p>Onboard, debug live and handle post-launch issues hands-on.</p></div>
-      <div><b>05</b><h3>Scale</h3><p>Turn one-off fixes into tools, docs and partner enablement.</p></div>
+      <div><b>01</b><h3>Discover</h3><p>Sit with the partner's CTO and team to find the outcome behind the request.</p></div>
+      <div><b>02</b><h3>Architect</h3><p>Design to their real constraints: data, security, legacy systems, team size.</p></div>
+      <div><b>03</b><h3>Build</h3><p>Write the importers, pipelines and sample code myself.</p></div>
+      <div><b>04</b><h3>Launch</h3><p>Run the launch, debug live issues, monitor in production.</p></div>
+      <div><b>05</b><h3>Scale</h3><p>Turn fixes into automation, docs and enablement so the next partner self-serves.</p></div>
     </div>
   </section>
 
@@ -128,40 +139,54 @@ footer{padding:32px 0;color:var(--muted);font-size:14px;display:flex;justify-con
     <p class="sub">Each one combined customer conversations with code I wrote.</p>
 
     <article class="case">
-      <div class="meta"><strong>Google</strong>Maps · data integrations</div>
+      <div class="meta"><strong>Google</strong>Maps & Business Profile<br>2019 – 2023</div>
       <div>
-        <h3>Making partner data onboarding self-serve</h3>
+        <h3>Onboarding 100+ data providers onto Google Maps</h3>
         <dl>
-          <dt>Problem</dt><dd>Partners integrating data into Google Maps faced slow, manual onboarding.</dd>
-          <dt>Built</dt><dd>Architected the data pipelines and built onboarding tooling so partners could self-serve setup.</dd>
-          <dt>Impact</dt><dd>Pipelines reaching 1B+ users; onboarding setup time cut by 95%.</dd>
+          <dt>Problem</dt><dd>Transit agencies, e-bike operators and business-listing providers across Australia, New Zealand and India each sent data in a different shape, and every onboarding was manual.</dd>
+          <dt>Built</dt><dd>Worked directly with providers' leadership to scope each integration. I architected the pipelines (500k+ e-bikes, 4M+ business listings, public transit schedules), wrote custom JavaScript importers for transit agencies, and automated onboarding with Python and Bash.</dd>
+          <dt>Impact</dt><dd>Data live for 1B+ monthly Maps users. Manual onboarding effort cut by 95%.</dd>
         </dl>
-        <span class="metric">−95% setup time</span>
+        <span class="metric">−95% onboarding effort</span>
       </div>
     </article>
 
     <article class="case">
-      <div class="meta"><strong>Meta</strong>Business messaging · APAC</div>
+      <div class="meta"><strong>Meta</strong>WhatsApp Business · India<br>2023</div>
       <div>
-        <h3>Driving WhatsApp Cloud API adoption through partners</h3>
+        <h3>Launching Click-to-WhatsApp Ads with messaging partners</h3>
         <dl>
-          <dt>Problem</dt><dd>Businesses and partners across APAC were slow to adopt Click-to-WhatsApp on the Cloud API.</dd>
-          <dt>Built</dt><dd>Technical enablement for partners: integration guidance, reference implementations and hands-on unblocking.</dd>
-          <dt>Impact</dt><dd>Reached 60% adoption of Click-to-WhatsApp Cloud APIs across APAC.</dd>
+          <dt>Problem</dt><dd>Messaging partners were slow to adopt the Click-to-WhatsApp Cloud API, and integrations stalled on complex edge cases.</dd>
+          <dt>Built</dt><dd>Led the launch for 10+ partners in India with product, engineering and sales. I went deep on partners' integration issues and wrote the sample code, docs and training the next partners needed.</dd>
+          <dt>Impact</dt><dd>60% adoption uplift. Deployment time down 30%. 90% of complex partner issues resolved.</dd>
         </dl>
-        <span class="metric">60% APAC adoption</span>
+        <span class="metric">+60% API adoption</span>
       </div>
     </article>
 
     <article class="case">
-      <div class="meta"><strong>Data platforms</strong>Privacy · activation</div>
+      <div class="meta"><strong>Grivy</strong>Retail martech · SEA<br>2024 – 2025</div>
       <div>
-        <h3>A first-party customer data platform with clean rooms</h3>
+        <h3>A first-party data platform, with a Gemini assistant on top</h3>
         <dl>
-          <dt>Problem</dt><dd>Customers needed to use first-party data for marketing without exposing it.</dd>
-          <dt>Built</dt><dd>Led development of a first-party data platform with secure clean rooms and automated audience activation.</dd>
-          <dt>Impact</dt><dd>Privacy-safe data collaboration and automated activation, without manual exports.</dd>
+          <dt>Problem</dt><dd>Global CPG brands needed online and offline (retail transaction) data in one place to run and measure campaigns.</dd>
+          <dt>Built</dt><dd>As Director of Business Engineering, I built the platform on BigQuery and Looker, documented ingestion APIs for brands, and added a Gemini chatbot (RAG) for natural-language queries. I also wrote the guides and API recipes that let partners in Indonesia onboard without engineering.</dd>
+          <dt>Impact</dt><dd>100+ brand campaigns, tens of millions of users' data, 4× faster campaign operations. <a href="https://cloud.google.com/customers/grivy">Featured as a Google Cloud customer story →</a></dd>
         </dl>
+        <span class="metric">Google Cloud case study</span>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="meta"><strong>Google</strong>Post-launch & developer experience</div>
+      <div>
+        <h3>Keeping integrations healthy after launch</h3>
+        <dl>
+          <dt>Problem</dt><dd>Once partners were live, problems showed up as bad listings, spam and a steady stream of support questions.</dd>
+          <dt>Built</dt><dd>ML-based monitoring (50+ dashboards, 100k+ lines of SQL), abuse-detection workflows, and a docs pipeline that generated 100+ pages of Business Profile API guides.</dd>
+          <dt>Impact</dt><dd>Spam on business listings down 40%, faster incident detection, and fewer support requests.</dd>
+        </dl>
+        <span class="metric">−40% listing spam</span>
       </div>
     </article>
   </section>
@@ -170,9 +195,9 @@ footer{padding:32px 0;color:var(--muted);font-size:14px;display:flex;justify-con
     <h2>What I bring</h2>
     <p class="sub">Deep enough to debug your pipeline, clear enough to explain it to your CMO.</p>
     <div class="grid3">
-      <div class="card"><h3>Technical depth</h3><ul><li>Data pipelines & platforms</li><li>REST APIs & webhooks</li><li>Cloud data warehousing (BigQuery, Dataform)</li><li>Full-stack & mobile prototyping</li></ul></div>
-      <div class="card"><h3>Customer-facing</h3><ul><li>Technical discovery & scoping</li><li>Solution architecture</li><li>Demos & proofs of concept</li><li>Post-launch troubleshooting</li></ul></div>
-      <div class="card"><h3>Scale & enablement</h3><ul><li>Partner enablement programs</li><li>Onboarding tooling</li><li>Docs & reference implementations</li><li>Product feedback loops</li></ul></div>
+      <div class="card"><h3>Technical depth</h3><ul><li>Python, JavaScript/Node, SQL, C++</li><li>REST APIs, OAuth, webhooks</li><li>BigQuery, Spanner, MongoDB, Firestore</li><li>GCP & AWS · Looker</li><li>LLM apps: Gemini, RAG</li></ul></div>
+      <div class="card"><h3>Customer-facing</h3><ul><li>Technical discovery with CTOs</li><li>Solution architecture</li><li>Partner launches across APAC</li><li>Deep-dive debugging & escalations</li><li>Technical training</li></ul></div>
+      <div class="card"><h3>Scale & enablement</h3><ul><li>Onboarding automation</li><li>Developer docs & API guides</li><li>Sample code & reference integrations</li><li>Monitoring & dashboards</li><li>Product feedback to engineering</li></ul></div>
     </div>
   </section>
 
@@ -186,12 +211,14 @@ footer{padding:32px 0;color:var(--muted);font-size:14px;display:flex;justify-con
 
   <section id="background">
     <h2>Background</h2>
-    <p class="sub">I started in robotics and moved toward the customer. I've kept building the whole way.</p>
+    <p class="sub">I started in robotics and moved toward the customer. That gives me patience for messy real-world systems.</p>
     <ul class="timeline">
-      <li><span class="org">Google</span><div><h3>Product Solutions Engineer</h3><p>Customer and partner integrations on Google platforms, Singapore.</p></div></li>
-      <li><span class="org">Earlier</span><div><h3>Director of Business Engineering · Senior Solutions Engineer</h3><p>Led technical solutioning for customers and partners, including work at Meta and Google.</p></div></li>
-      <li><span class="org">Independent</span><div><h3>Builder & writer</h3><p>SaaS and automation side projects, and writing on Substack about building with technology.</p></div></li>
-      <li><span class="org">Foundations</span><div><h3>Robotics & software engineering</h3><p>Motion planning, indoor localization and sensor fusion. The code is <a href="https://github.com/aswinthomas">on GitHub</a>.</p></div></li>
+      <li><span class="org">Google · 2026 –</span><div><h3>Product Solutions Engineer</h3><p>Partner integrations, back at Google.</p></div></li>
+      <li><span class="org">Grivy · 2024 – 2025</span><div><h3>Director, Business Engineering</h3><p>Solutions engineering and data platform for retail and CPG brands.</p></div></li>
+      <li><span class="org">Meta · 2023</span><div><h3>Business Engineer</h3><p>WhatsApp Business and Click-to-WhatsApp partner integrations.</p></div></li>
+      <li><span class="org">Google · 2019 – 2023</span><div><h3>Technical Solutions Consultant</h3><p>Google Maps data providers and the Business Profile API.</p></div></li>
+      <li><span class="org">2008 – 2019</span><div><h3>Robotics & autonomous vehicles</h3><p>Blue Ocean Robotics (Denmark), SESTO Robotics, nuTonomy, HOPE Technik and NUS. I led software teams and delivered 50+ client robotics projects across Europe and APAC.</p></div></li>
+      <li><span class="org">Education</span><div><h3>MSc Mechatronics, National University of Singapore</h3><p>BEng Electronics. <a href="https://dblp.uni-trier.de/pers/hd/a/Abraham:Aswin_Thomas">Publications</a> and <a href="https://patents.google.com/?inventor=Aswin+Thomas+ABRAHAM">patents</a> in robotics and AI.</p></div></li>
     </ul>
   </section>
 
