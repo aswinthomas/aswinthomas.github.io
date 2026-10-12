@@ -1,142 +1,210 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Aswin Thomas Abraham Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aswin Thomas Abraham — Solutions & Integration Engineer</title>
+<meta name="description" content="Aswin Thomas Abraham is a customer-facing engineer who turns complex platforms into working integrations. Solutions engineering at Google and Meta, based in Singapore.">
+<meta property="og:title" content="Aswin Thomas Abraham — Solutions & Integration Engineer">
+<meta property="og:description" content="I sit between the customer and the code: scoping the problem, building the integration, and staying until it works in production.">
+<meta property="og:image" content="https://aswindev.com/images/profile.jpg">
+<meta property="og:url" content="https://aswindev.com">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://aswindev.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f5f0; --surface:#ffffff; --ink:#1a1a17; --muted:#5e5c55; --line:#e2ded4;
+  --accent:#1f5c4a; --accent-soft:#e3eee9;
+  --serif:'Fraunces',Georgia,serif; --sans:'Inter',system-ui,sans-serif; --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#121311;--surface:#1a1c19;--ink:#ecebe6;--muted:#a3a198;--line:#2c2e2a;--accent:#7fc4a8;--accent-soft:#1d2b25;}
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:28px 0}
+nav .mark{font:600 15px var(--mono);text-decoration:none;letter-spacing:.02em}
+nav ul{display:flex;gap:24px;list-style:none;font-size:15px}
+nav ul a{text-decoration:none;color:var(--muted)}
+nav ul a:hover{color:var(--ink)}
+.hero{padding:72px 0 88px;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center}
+.eyebrow{font:500 13px var(--mono);color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:20px}
+h1{font:500 clamp(36px,5.6vw,60px)/1.08 var(--serif);letter-spacing:-.02em;margin-bottom:24px}
+h1 em{font-style:italic;color:var(--accent)}
+.lede{font-size:19px;color:var(--muted);max-width:56ch;margin-bottom:32px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 20px;border-radius:6px;font:500 15px var(--sans);text-decoration:none;border:1px solid var(--ink)}
+.btn.primary{background:var(--ink);color:var(--bg)}
+.btn:hover{opacity:.85}
+.portrait{width:200px;height:200px;border-radius:50%;object-fit:cover;filter:grayscale(.2)}
+section{padding:72px 0;border-top:1px solid var(--line)}
+h2{font:500 32px/1.2 var(--serif);letter-spacing:-.01em;margin-bottom:12px}
+.sub{color:var(--muted);max-width:60ch;margin-bottom:40px}
+.loop{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.loop div{background:var(--surface);padding:22px 18px}
+.loop b{display:block;font:500 12px var(--mono);color:var(--accent);margin-bottom:8px}
+.loop h3{font:600 16px var(--sans);margin-bottom:6px}
+.loop p{font-size:14px;color:var(--muted);line-height:1.5}
+.case{display:grid;grid-template-columns:200px 1fr;gap:32px;padding:36px 0;border-bottom:1px solid var(--line)}
+.case:last-child{border-bottom:0}
+.case .meta{font:400 13px/1.6 var(--mono);color:var(--muted)}
+.case .meta strong{display:block;color:var(--ink);font-weight:500}
+.case h3{font:500 24px/1.25 var(--serif);margin-bottom:14px}
+.case dl{display:grid;grid-template-columns:90px 1fr;gap:8px 16px;font-size:16px}
+.case dt{font:500 12px/2 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.metric{display:inline-block;margin-top:16px;padding:6px 12px;background:var(--accent-soft);color:var(--accent);border-radius:4px;font:500 14px var(--mono)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:24px}
+.card h3{font:600 16px var(--sans);margin-bottom:10px}
+.card ul{list-style:none;font-size:15px;color:var(--muted)}
+.card li{padding:3px 0}
+.roles{display:flex;flex-wrap:wrap;gap:10px}
+.roles span{padding:8px 14px;border:1px solid var(--line);border-radius:999px;font-size:15px;background:var(--surface)}
+.timeline{list-style:none}
+.timeline li{display:grid;grid-template-columns:200px 1fr;gap:32px;padding:16px 0;border-bottom:1px solid var(--line)}
+.timeline .org{font:500 14px var(--mono);color:var(--muted)}
+.timeline h3{font:600 17px var(--sans)}
+.timeline p{color:var(--muted);font-size:15px}
+.contact{text-align:center;padding:96px 0}
+.contact h2{font-size:clamp(30px,4.5vw,44px);margin-bottom:16px}
+.contact .cta{justify-content:center;margin-top:28px}
+footer{padding:32px 0;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;border-top:1px solid var(--line)}
+@media (max-width:820px){
+  .hero{grid-template-columns:1fr;padding:40px 0 64px}
+  .portrait{width:120px;height:120px;order:-1}
+  .loop{grid-template-columns:1fr}
+  .case,.timeline li{grid-template-columns:1fr;gap:12px}
+  .grid3{grid-template-columns:1fr}
+  nav ul{gap:16px}
+  nav ul li.hide-sm{display:none}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <a class="mark" href="#">aswin.dev</a>
+    <ul>
+      <li><a href="#approach">Approach</a></li>
+      <li><a href="#work">Work</a></li>
+      <li class="hide-sm"><a href="#background">Background</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
+  <header class="hero">
+    <div>
+      <p class="eyebrow">Solutions · Integration · Forward-deployed engineering</p>
+      <h1>I turn complex platforms into <em>integrations that actually ship.</em></h1>
+      <p class="lede">I'm Aswin Thomas Abraham, an engineer who works directly with customers and partners. I scope the real problem, design the architecture, write the code, and stay until it runs in production. I've done this for data platforms, messaging APIs and mapping data at Google and Meta, from Singapore across APAC.</p>
+      <div class="cta">
+        <a class="btn primary" href="https://www.linkedin.com/in/aswinta/">Talk to me on LinkedIn</a>
+        <a class="btn" href="https://github.com/aswinthomas">See my code</a>
+      </div>
+    </div>
+    <img class="portrait" src="images/profile.jpg" alt="Portrait of Aswin Thomas Abraham" width="200" height="200">
+  </header>
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+  <section id="approach">
+    <h2>How I work with customers</h2>
+    <p class="sub">Most integrations don't fail on the code. They fail between the code and the people using it. I own the whole loop, so nothing gets lost in a handoff.</p>
+    <div class="loop">
+      <div><b>01</b><h3>Discover</h3><p>Find the business outcome behind the technical request.</p></div>
+      <div><b>02</b><h3>Architect</h3><p>Design to the customer's real constraints: data, security, team.</p></div>
+      <div><b>03</b><h3>Build</h3><p>Prototype fast, then write production-grade pipelines and APIs.</p></div>
+      <div><b>04</b><h3>Launch</h3><p>Onboard, debug live and handle post-launch issues hands-on.</p></div>
+      <div><b>05</b><h3>Scale</h3><p>Turn one-off fixes into tools, docs and partner enablement.</p></div>
+    </div>
+  </section>
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>Aswin Thomas Abraham</h1>
-                                            <p>Technical Product Manager specializing in data platforms and backend systems with experience at Google, Meta. <a href="https://www.linkedin.com/in/aswinta/" target= "_blank">@aswin</a></p>
-                                            <a href="#" class="image avatar"><img src="images/profile.jpg" alt="" /></a><br>
-                                            <p>Welcome! I build scalable data infrastructure and APIs that power customer insights and automation. My work spans first‑party data platforms, secure clean rooms and messaging integrations, bridging engineering and product strategy.</p>
-                                            <ul class="icons">
-                                            <li><a href="https://www.linkedin.com/in/aswinta/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                                            <li><a href="https://github.com/aswinthomas" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                                            </ul>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+  <section id="work">
+    <h2>Selected work</h2>
+    <p class="sub">Each one combined customer conversations with code I wrote.</p>
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Aswin Thomas Abraham</a>
-					</header>
+    <article class="case">
+      <div class="meta"><strong>Google</strong>Maps · data integrations</div>
+      <div>
+        <h3>Making partner data onboarding self-serve</h3>
+        <dl>
+          <dt>Problem</dt><dd>Partners integrating data into Google Maps faced slow, manual onboarding.</dd>
+          <dt>Built</dt><dd>Architected the data pipelines and built onboarding tooling so partners could self-serve setup.</dd>
+          <dt>Impact</dt><dd>Pipelines reaching 1B+ users; onboarding setup time cut by 95%.</dd>
+        </dl>
+        <span class="metric">−95% setup time</span>
+      </div>
+    </article>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Projects</a></li>
-							<!-- <li><a href="generic.html">Generic Page</a></li>
-							<li><a href="elements.html">Elements Reference</a></li> -->
-						</ul>
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/aswinta/" target= "_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/aswinthomas" target= "_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+    <article class="case">
+      <div class="meta"><strong>Meta</strong>Business messaging · APAC</div>
+      <div>
+        <h3>Driving WhatsApp Cloud API adoption through partners</h3>
+        <dl>
+          <dt>Problem</dt><dd>Businesses and partners across APAC were slow to adopt Click-to-WhatsApp on the Cloud API.</dd>
+          <dt>Built</dt><dd>Technical enablement for partners: integration guidance, reference implementations and hands-on unblocking.</dd>
+          <dt>Impact</dt><dd>Reached 60% adoption of Click-to-WhatsApp Cloud APIs across APAC.</dd>
+        </dl>
+        <span class="metric">60% APAC adoption</span>
+      </div>
+    </article>
 
-				<!-- Main -->
-					<div id="main">
+    <article class="case">
+      <div class="meta"><strong>Data platforms</strong>Privacy · activation</div>
+      <div>
+        <h3>A first-party customer data platform with clean rooms</h3>
+        <dl>
+          <dt>Problem</dt><dd>Customers needed to use first-party data for marketing without exposing it.</dd>
+          <dt>Built</dt><dd>Led development of a first-party data platform with secure clean rooms and automated audience activation.</dd>
+          <dt>Impact</dt><dd>Privacy-safe data collaboration and automated activation, without manual exports.</dd>
+        </dl>
+      </div>
+    </article>
+  </section>
 
-                                                <!-- Featured Post -->
-                                                        <article class="post featured">
-                                                                <header class="major">
-                                                                        <h2><a href="#">Customer Data Platform</a></h2>
-                                                                        <p>Led development of a first‑party data platform with secure clean rooms and automated audience activations.</p>
-                                                                </header>
-                                                                <a href="#" class="image main">
-                                                                        <img src="images/pic01.jpg" alt="Data platform" />
-                                                                </a><br>
-                                                                <ul class="actions special">
-                                                                        <li><a href="https://www.linkedin.com/in/aswinta/" target="_blank" class="button large">LinkedIn</a></li>
-                                                                </ul>
-                                                        </article>
+  <section>
+    <h2>What I bring</h2>
+    <p class="sub">Deep enough to debug your pipeline, clear enough to explain it to your CMO.</p>
+    <div class="grid3">
+      <div class="card"><h3>Technical depth</h3><ul><li>Data pipelines & platforms</li><li>REST APIs & webhooks</li><li>Cloud data warehousing (BigQuery, Dataform)</li><li>Full-stack & mobile prototyping</li></ul></div>
+      <div class="card"><h3>Customer-facing</h3><ul><li>Technical discovery & scoping</li><li>Solution architecture</li><li>Demos & proofs of concept</li><li>Post-launch troubleshooting</li></ul></div>
+      <div class="card"><h3>Scale & enablement</h3><ul><li>Partner enablement programs</li><li>Onboarding tooling</li><li>Docs & reference implementations</li><li>Product feedback loops</li></ul></div>
+    </div>
+  </section>
 
-						<!-- Posts -->
-							<section class="posts" id="post-section">
-                                                                <article>
-                                                                        <header>
-                                                                               <h2><a href="#">Messaging API Adoption</a></h2>
-                                                                               <p>Drove 60% adoption of Click-to-WhatsApp Cloud APIs across APAC through partner enablement.</p>
-                                                                        </header>
-                                                                        <a href="#" class="image fit">
-                                                                               <img src="images/pic02.jpg" alt="Messaging APIs" />
-                                                                        </a>
-                                                                        <ul class="actions special">
-                                                                               <li><a href="https://www.linkedin.com/in/aswinta/" target="_blank" class="button">Learn more</a></li>
-                                                                        </ul>
-                                                                </article>
-                                                                <article>
-                                                                        <header>
-                                                                               <h2><a href="#">Google Maps Data Integrations</a></h2>
-                                                                               <p>Architected data pipelines impacting 1B+ users and built onboarding tools reducing setup time by 95%.</p>
-                                                                        </header>
-                                                                        <a href="#" class="image fit">
-                                                                               <img src="images/pic03.jpg" alt="Maps integrations" />
-                                                                        </a>
-                                                                        <ul class="actions special">
-                                                                               <li><a href="https://www.linkedin.com/in/aswinta/" target="_blank" class="button">Learn more</a></li>
-                                                                        </ul>
-                                                                </article>
-								
-							</section> 
+  <section>
+    <h2>Roles I'm built for</h2>
+    <p class="sub">Anywhere the job is part engineer, part trusted advisor.</p>
+    <div class="roles">
+      <span>Solutions Engineer</span><span>Integration Engineer</span><span>Post-launch / Customer Engineer</span><span>Forward Deployed Engineer</span><span>Developer Relations</span><span>Solutions Architect</span>
+    </div>
+  </section>
 
-						<!-- Footer -->
-                                                        <footer>
-                                                                <div class="pagination">
-                                                                        <a href="#" class="page active">1</a>
-                                                                </div>
-                                                        </footer>
+  <section id="background">
+    <h2>Background</h2>
+    <p class="sub">I started in robotics and moved toward the customer. I've kept building the whole way.</p>
+    <ul class="timeline">
+      <li><span class="org">Google</span><div><h3>Product Solutions Engineer</h3><p>Customer and partner integrations on Google platforms, Singapore.</p></div></li>
+      <li><span class="org">Earlier</span><div><h3>Director of Business Engineering · Senior Solutions Engineer</h3><p>Led technical solutioning for customers and partners, including work at Meta and Google.</p></div></li>
+      <li><span class="org">Independent</span><div><h3>Builder & writer</h3><p>SaaS and automation side projects, and writing on Substack about building with technology.</p></div></li>
+      <li><span class="org">Foundations</span><div><h3>Robotics & software engineering</h3><p>Motion planning, indoor localization and sensor fusion. The code is <a href="https://github.com/aswinthomas">on GitHub</a>.</p></div></li>
+    </ul>
+  </section>
 
-					</div>
+  <section id="contact" class="contact">
+    <h2>Have a hard integration problem?</h2>
+    <p class="sub" style="margin:0 auto">I'm always glad to talk about solutions, integration and forward-deployed roles, especially ones that put me in front of customers.</p>
+    <div class="cta">
+      <a class="btn primary" href="https://www.linkedin.com/in/aswinta/">Message me on LinkedIn</a>
+      <a class="btn" href="https://github.com/aswinthomas">GitHub</a>
+    </div>
+  </section>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<section class="split contact">
-							<section class="alt">
-								<h3>Location</h3>
-								<p>Singapore</p>
-							</section>
-							<!-- <section>
-								<h3>Phone</h3>
-								<p><a href="#">(000) 000-0000</a></p>
-							</section> -->
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="https://www.linkedin.com/in/aswinta/" target= "_blank" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://github.com/aswinthomas" target= "_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
-
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+  <footer><span>© 2026 Aswin Thomas Abraham</span><span>Singapore</span></footer>
+</div>
+</body>
 </html>
