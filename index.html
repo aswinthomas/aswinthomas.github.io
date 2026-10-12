@@ -1,142 +1,330 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Aswin Thomas Abraham Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aswin Thomas Abraham, Solutions Engineer</title>
+<meta name="description" content="Solutions engineer for integrations that can't fail. Payment integrations at Google, 100+ partners taken to production at Google and Meta, and 18 years of shipping software.">
+<meta property="og:title" content="Aswin Thomas Abraham, Solutions Engineer">
+<meta property="og:description" content="Solutions engineer for integrations that can't fail. Google Payments, Google Maps, Meta, and 18 years of shipping software.">
+<meta property="og:image" content="https://aswindev.com/images/profile.jpg">
+<meta property="og:url" content="https://aswindev.com">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0F1318">
+<link rel="canonical" href="https://aswindev.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0F1318; --raise:#151A21; --line:#252C36; --line-2:#323B47;
+  --text:#E9ECF1; --soft:#A3ABB8; --faint:#6B7584; --accent:#8DB4FF;
+  --sans:'Geist',system-ui,sans-serif; --mono:'Geist Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font:400 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 40px}
 
+.nav{display:flex;justify-content:space-between;align-items:center;height:76px;border-bottom:1px solid var(--line)}
+.nav .id{font-weight:600;font-size:16px;letter-spacing:-.01em}
+.nav nav{display:flex;align-items:center;gap:32px;font-size:15px;color:var(--soft)}
+.nav nav a:hover{color:var(--text)}
+.nav .talk{color:var(--text);border:1px solid var(--line-2);padding:8px 16px;border-radius:6px}
+.nav .talk:hover{border-color:var(--soft)}
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+.hero{display:grid;grid-template-columns:1fr 320px;gap:80px;align-items:center;padding:112px 0 88px}
+h1{font-weight:500;font-size:clamp(42px,5.4vw,68px);line-height:1.04;letter-spacing:-.035em;max-width:14ch}
+.hero .lede{font-size:19px;line-height:1.6;color:var(--soft);max-width:52ch;margin:32px 0 40px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;height:46px;padding:0 22px;border-radius:6px;font-weight:500;font-size:15px;border:1px solid var(--line-2);transition:border-color .15s,background .15s}
+.btn:hover{border-color:var(--soft)}
+.btn.primary{background:var(--text);color:var(--bg);border-color:var(--text)}
+.btn.primary:hover{background:#fff}
+.portrait{justify-self:end;text-align:center}
+.portrait img{display:block;width:280px;height:280px;object-fit:cover;object-position:50% 30%;filter:grayscale(1) contrast(1.08) brightness(.95);border-radius:50%;border:1px solid var(--line-2);padding:8px;background:var(--bg);box-shadow:0 0 0 1px var(--line)}
+.portrait figcaption{font-size:13px;color:var(--faint);margin-top:18px}
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>Aswin Thomas Abraham</h1>
-                                            <p>Technical Product Manager specializing in data platforms and backend systems with experience at Google, Meta. <a href="https://www.linkedin.com/in/aswinta/" target= "_blank">@aswin</a></p>
-                                            <a href="#" class="image avatar"><img src="images/profile.jpg" alt="" /></a><br>
-                                            <p>Welcome! I build scalable data infrastructure and APIs that power customer insights and automation. My work spans first‑party data platforms, secure clean rooms and messaging integrations, bridging engineering and product strategy.</p>
-                                            <ul class="icons">
-                                            <li><a href="https://www.linkedin.com/in/aswinta/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                                            <li><a href="https://github.com/aswinthomas" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                                            </ul>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.metrics div{padding:32px 28px 30px 0}
+.metrics div+div{padding-left:28px;border-left:1px solid var(--line)}
+.metrics strong{display:block;font-weight:500;font-size:44px;line-height:1;letter-spacing:-.04em;white-space:nowrap}
+.metrics strong em{font-style:normal;color:var(--faint);font-weight:400}
+.metrics span{display:block;margin-top:10px;font-size:14px;color:var(--soft);line-height:1.45}
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Aswin Thomas Abraham</a>
-					</header>
+section{padding:120px 0 0}
+.head{display:grid;grid-template-columns:340px 1fr;gap:80px;margin-bottom:56px}
+h2{font-weight:500;font-size:30px;line-height:1.15;letter-spacing:-.025em}
+.head p{color:var(--soft);max-width:58ch;padding-top:4px}
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Projects</a></li>
-							<!-- <li><a href="generic.html">Generic Page</a></li>
-							<li><a href="elements.html">Elements Reference</a></li> -->
-						</ul>
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/aswinta/" target= "_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/aswinthomas" target= "_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+.schematic{border:1px solid var(--line);border-radius:6px;background-color:var(--raise);background-image:radial-gradient(circle at 1px 1px,#1E252E 1px,transparent 0);background-size:22px 22px;padding:40px 32px}
+.schematic svg{display:block;width:100%;height:auto}
+.schematic text{font:400 12.5px var(--mono);fill:var(--soft)}
+.schematic .t{font:500 14px var(--sans);fill:var(--text)}
+.schematic .src rect{fill:var(--bg);stroke:var(--line-2)}
+.schematic .feed{fill:none;stroke:var(--line-2);stroke-width:1.2}
+.schematic .spine{fill:none;stroke:var(--accent);stroke-width:1.6}
+.schematic .node{fill:var(--bg);stroke:var(--accent);stroke-width:1.6}
+.schematic .prod{fill:var(--accent)}
+.schematic .prod-t{font:600 14px var(--sans);fill:var(--bg)}
+.js .schematic .feed,.js .schematic .spine{stroke-dasharray:var(--l);stroke-dashoffset:var(--l)}
+.js .schematic.on .feed,.js .schematic.on .spine{transition:stroke-dashoffset 1.1s cubic-bezier(.65,0,.25,1);stroke-dashoffset:0}
+.js .schematic.on .spine{transition-delay:.7s;transition-duration:1.6s}
+.js .schematic .stage{opacity:0}
+.js .schematic.on .stage{opacity:1;transition:opacity .5s ease}
+.stages-list{display:none}
+@media (prefers-reduced-motion:reduce){.js .schematic .feed,.js .schematic .spine{stroke-dashoffset:0;transition:none}.js .schematic .stage{opacity:1;transition:none}}
 
-				<!-- Main -->
-					<div id="main">
+.eng{border-top:1px solid var(--line)}
+.eng details{border-bottom:1px solid var(--line)}
+.eng summary{list-style:none;display:grid;grid-template-columns:150px 1fr 230px 24px;gap:32px;align-items:baseline;padding:28px 0;cursor:pointer}
+.eng summary::-webkit-details-marker{display:none}
+.eng .org{font-weight:500}
+.eng .org small{display:block;font-size:13px;color:var(--faint);font-weight:400;margin-top:2px}
+.eng .what{font-size:20px;letter-spacing:-.015em;line-height:1.35}
+.eng .out{font-size:15px;color:var(--accent);line-height:1.4}
+.eng .plus{width:14px;height:14px;position:relative;align-self:center}
+.eng .plus::before,.eng .plus::after{content:"";position:absolute;background:var(--soft);left:0;top:6px;width:14px;height:1.5px;transition:transform .2s}
+.eng .plus::after{transform:rotate(90deg)}
+.eng details[open] .plus::after{transform:rotate(0)}
+.eng summary:hover .what{color:#fff}
+.eng .body{display:grid;grid-template-columns:150px 1fr 230px 24px;gap:32px;padding:0 0 36px}
+.eng .body dl{grid-column:2/4;display:grid;grid-template-columns:110px 1fr;gap:12px 24px;color:var(--soft);font-size:16px}
+.eng .body dt{color:var(--faint);font-size:14px;padding-top:2px}
+.eng .body a{color:var(--accent);border-bottom:1px solid rgba(141,180,255,.35)}
 
-                                                <!-- Featured Post -->
-                                                        <article class="post featured">
-                                                                <header class="major">
-                                                                        <h2><a href="#">Customer Data Platform</a></h2>
-                                                                        <p>Led development of a first‑party data platform with secure clean rooms and automated audience activations.</p>
-                                                                </header>
-                                                                <a href="#" class="image main">
-                                                                        <img src="images/pic01.jpg" alt="Data platform" />
-                                                                </a><br>
-                                                                <ul class="actions special">
-                                                                        <li><a href="https://www.linkedin.com/in/aswinta/" target="_blank" class="button large">LinkedIn</a></li>
-                                                                </ul>
-                                                        </article>
+.caps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.caps div{background:var(--bg);padding:32px 28px}
+.caps h3{font-weight:500;font-size:18px;margin-bottom:6px}
+.caps p{color:var(--faint);font-size:14px;margin-bottom:20px}
+.caps ul{list-style:none;color:var(--soft);font-size:15px}
+.caps li{padding:6px 0;border-top:1px solid var(--line)}
 
-						<!-- Posts -->
-							<section class="posts" id="post-section">
-                                                                <article>
-                                                                        <header>
-                                                                               <h2><a href="#">Messaging API Adoption</a></h2>
-                                                                               <p>Drove 60% adoption of Click-to-WhatsApp Cloud APIs across APAC through partner enablement.</p>
-                                                                        </header>
-                                                                        <a href="#" class="image fit">
-                                                                               <img src="images/pic02.jpg" alt="Messaging APIs" />
-                                                                        </a>
-                                                                        <ul class="actions special">
-                                                                               <li><a href="https://www.linkedin.com/in/aswinta/" target="_blank" class="button">Learn more</a></li>
-                                                                        </ul>
-                                                                </article>
-                                                                <article>
-                                                                        <header>
-                                                                               <h2><a href="#">Google Maps Data Integrations</a></h2>
-                                                                               <p>Architected data pipelines impacting 1B+ users and built onboarding tools reducing setup time by 95%.</p>
-                                                                        </header>
-                                                                        <a href="#" class="image fit">
-                                                                               <img src="images/pic03.jpg" alt="Maps integrations" />
-                                                                        </a>
-                                                                        <ul class="actions special">
-                                                                               <li><a href="https://www.linkedin.com/in/aswinta/" target="_blank" class="button">Learn more</a></li>
-                                                                        </ul>
-                                                                </article>
-								
-							</section> 
+.career{list-style:none;border-top:1px solid var(--line)}
+.career li{display:grid;grid-template-columns:150px 1fr 1fr;gap:32px;padding:20px 0;border-bottom:1px solid var(--line);font-size:16px}
+.career .yr{color:var(--faint);font-variant-numeric:tabular-nums}
+.career .co{color:var(--soft)}
+.career li.pivot{border-bottom-color:var(--accent)}
+.creds{margin-top:28px;color:var(--soft);font-size:15px}
+.creds a{color:var(--text);border-bottom:1px solid var(--line-2)}
+.creds a:hover{border-color:var(--text)}
 
-						<!-- Footer -->
-                                                        <footer>
-                                                                <div class="pagination">
-                                                                        <a href="#" class="page active">1</a>
-                                                                </div>
-                                                        </footer>
+.contact{padding:160px 0 120px}
+.contact .box{border-top:1px solid var(--line);padding-top:72px;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:end}
+.contact h2{font-size:clamp(36px,4.6vw,56px);line-height:1.05;letter-spacing:-.035em;max-width:16ch}
+.contact p{color:var(--soft);margin-top:20px;max-width:52ch}
+footer{border-top:1px solid var(--line);padding:28px 0 40px;font-size:13px;color:var(--faint)}
+footer .wrap{display:flex;justify-content:space-between}
 
-					</div>
+@media (max-width:900px){
+  .wrap{padding:0 20px}
+  .nav nav a.opt{display:none}
+  .hero{grid-template-columns:1fr;gap:48px;padding:56px 0 56px}
+  .portrait{order:-1;justify-self:start;text-align:left}
+  .portrait img{width:168px;height:168px;padding:6px}
+  .metrics{grid-template-columns:1fr 1fr}
+  .metrics div,.metrics div+div{padding:24px 12px 24px 0;border-left:0}
+  .metrics div:nth-child(even){padding-left:16px;border-left:1px solid var(--line)}
+  .metrics div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .metrics strong{font-size:32px}
+  section{padding-top:88px}
+  .head{grid-template-columns:1fr;gap:16px;margin-bottom:36px}
+  .schematic{padding:24px 20px}
+  .schematic svg{display:none}
+  .stages-list{display:block;list-style:none}
+  .stages-list li{padding:14px 0 14px 28px;border-left:1.5px solid var(--accent);position:relative;color:var(--soft);font-size:15px}
+  .stages-list li::before{content:"";position:absolute;left:-6px;top:20px;width:10px;height:10px;border-radius:50%;background:var(--raise);border:1.5px solid var(--accent)}
+  .stages-list b{display:block;color:var(--text);font-weight:500}
+  .eng summary{grid-template-columns:1fr 20px;gap:8px 16px}
+  .eng .org,.eng .what,.eng .out{grid-column:1/2}
+  .eng .plus{grid-row:1;grid-column:2}
+  .eng .body{grid-template-columns:1fr}
+  .eng .body dl{grid-column:1;grid-template-columns:1fr;gap:4px}
+  .eng .body dd{margin-bottom:12px}
+  .caps{grid-template-columns:1fr}
+  .career li{grid-template-columns:1fr;gap:2px}
+  .contact{padding:112px 0 80px}
+  .contact .box{grid-template-columns:1fr}
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<div class="wrap">
+  <header class="nav">
+    <a class="id" href="#">Aswin Thomas Abraham</a>
+    <nav aria-label="Sections">
+      <a class="opt" href="#approach">Approach</a>
+      <a class="opt" href="#work">Work</a>
+      <a class="opt" href="#career">Career</a>
+      <a class="talk" href="#contact">Get in touch</a>
+    </nav>
+  </header>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<section class="split contact">
-							<section class="alt">
-								<h3>Location</h3>
-								<p>Singapore</p>
-							</section>
-							<!-- <section>
-								<h3>Phone</h3>
-								<p><a href="#">(000) 000-0000</a></p>
-							</section> -->
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="https://www.linkedin.com/in/aswinta/" target= "_blank" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://github.com/aswinthomas" target= "_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
+  <main>
+  <div class="hero">
+    <div>
+      <h1>Solutions engineer for integrations that can't fail.</h1>
+      <p class="lede">I own the hardest part of a platform business: getting partners live, and keeping them live. Today I launch payment integrations at Google across Asia. Before that I took 100+ partners to production on Google Maps and at Meta, and before that I spent eleven years shipping robots that had to work in the real world.</p>
+      <div class="btns">
+        <a class="btn primary" href="#contact">Discuss a role</a>
+        <a class="btn" href="#work">View selected work</a>
+      </div>
+    </div>
+    <figure class="portrait">
+      <img src="images/profile.jpg" alt="Aswin Thomas Abraham" width="425" height="441">
+      <figcaption>Singapore</figcaption>
+    </figure>
+  </div>
 
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
+  <div class="metrics">
+    <div><strong>40×</strong><span>faster payment-partner setup, from weeks to a day</span></div>
+    <div><strong>1B+</strong><span>monthly users served by Maps pipelines I architected</span></div>
+    <div><strong>100+</strong><span>partners and data providers taken to production</span></div>
+    <div><strong>18 yrs</strong><span>shipping software, from robotics to payments</span></div>
+  </div>
 
-			</div>
+  <section id="approach">
+    <div class="head">
+      <h2>How an integration reaches production</h2>
+      <p>Every partner arrives with different systems, constraints and stakeholders. I run one disciplined path from the first conversation to a stable, monitored launch, and I write the code along the way.</p>
+    </div>
+    <div class="schematic" id="schematic">
+      <svg viewBox="0 0 1040 300" role="img" aria-label="Schematic: five different partner systems converge into one path with five stages, Discover, Architect, Build, Launch and Operate, ending in production.">
+        <g class="src">
+          <rect x="1" y="26" width="150" height="34" rx="3"/><text x="16" y="48">wallet_sdk</text>
+          <rect x="1" y="84" width="150" height="34" rx="3"/><text x="16" y="106">qr_payments</text>
+          <rect x="1" y="142" width="150" height="34" rx="3"/><text x="16" y="164">transit_feed.gtfs</text>
+          <rect x="1" y="200" width="150" height="34" rx="3"/><text x="16" y="222">ads_api</text>
+          <rect x="1" y="258" width="150" height="34" rx="3"/><text x="16" y="280">pos_export.csv</text>
+        </g>
+        <path class="feed" style="--l:200" d="M151,43 C210,43 210,159 262,159"/>
+        <path class="feed" style="--l:200" d="M151,101 C210,101 210,159 262,159"/>
+        <path class="feed" style="--l:200" d="M151,159 L262,159"/>
+        <path class="feed" style="--l:200" d="M151,217 C210,217 210,159 262,159"/>
+        <path class="feed" style="--l:200" d="M151,275 C210,275 210,159 262,159"/>
+        <path class="spine" style="--l:660" d="M262,159 L918,159"/>
+        <g class="stage" style="transition-delay:1.0s"><circle class="node" cx="330" cy="159" r="7"/><text class="t" x="330" y="128" text-anchor="middle">Discover</text><text x="330" y="196" text-anchor="middle">real outcome</text></g>
+        <g class="stage" style="transition-delay:1.25s"><circle class="node" cx="470" cy="159" r="7"/><text class="t" x="470" y="128" text-anchor="middle">Architect</text><text x="470" y="196" text-anchor="middle">fit constraints</text></g>
+        <g class="stage" style="transition-delay:1.5s"><circle class="node" cx="610" cy="159" r="7"/><text class="t" x="610" y="128" text-anchor="middle">Build</text><text x="610" y="196" text-anchor="middle">code + docs</text></g>
+        <g class="stage" style="transition-delay:1.75s"><circle class="node" cx="750" cy="159" r="7"/><text class="t" x="750" y="128" text-anchor="middle">Launch</text><text x="750" y="196" text-anchor="middle">go live</text></g>
+        <g class="stage" style="transition-delay:2.0s"><circle class="node" cx="890" cy="159" r="7"/><text class="t" x="890" y="128" text-anchor="middle">Operate</text><text x="890" y="196" text-anchor="middle">monitor, scale</text></g>
+        <g class="stage" style="transition-delay:2.3s"><rect class="prod" x="918" y="140" width="120" height="38" rx="3"/><text class="prod-t" x="978" y="164" text-anchor="middle">Production</text></g>
+      </svg>
+      <ol class="stages-list" aria-hidden="true">
+        <li><b>Discover</b>Find the business outcome behind the request</li>
+        <li><b>Architect</b>Design around their data, security and team</li>
+        <li><b>Build</b>Configuration, pipelines, sample code and docs</li>
+        <li><b>Launch</b>Run the go-live and debug it hands-on</li>
+        <li><b>Operate</b>Monitor, then automate so the next partner self-serves</li>
+      </ol>
+    </div>
+  </section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+  <section id="work">
+    <div class="head">
+      <h2>Selected work</h2>
+      <p>Engagements where the outcome depended on both the customer relationship and the code. Open any one for the details.</p>
+    </div>
+    <div class="eng">
+      <details open>
+        <summary><span class="org">Google Payments<small>2026 – now</small></span><span class="what">Turned a slow, manual payment-partner launch into a repeatable one-day process</span><span class="out">Partner setup cut from weeks to a day</span><span class="plus" aria-hidden="true"></span></summary>
+        <div class="body"><dl>
+          <dt>Situation</dt><dd>A new payments integration had no established launch process. The first partner took weeks to configure, and every new market brought its own constraints.</dd>
+          <dt>What I did</dt><dd>Wrote the launch blueprint that aligned several cross-functional teams, and stepped in to drive execution when the team was short-staffed. I turned the first onboarding into a playbook that powered AI-assisted configuration, fixed platform defects along the way, and worked through partners' cryptography and SDK issues so their testing could continue.</dd>
+          <dt>Judgement call</dt><dd>Shortly before launch, I found a partner-side implementation pattern that would have broken the core user experience. I made the case to product and engineering to address it, then updated the developer documentation so partners could plan for the fix.</dd>
+          <dt>Result</dt><dd>Partners across multiple Asian markets configured in about a day each, with fewer defects reaching engineering.</dd>
+        </dl></div>
+      </details>
+      <details>
+        <summary><span class="org">Google Payments<small>2026</small></span><span class="what">Fast-tracked a replacement payment method when a key market lost a provider</span><span class="out">Revenue path protected</span><span class="plus" aria-hidden="true"></span></summary>
+        <div class="body"><dl>
+          <dt>Situation</dt><dd>A payment provider in a key market became unavailable, and a replacement had to launch quickly through risk, experimentation and policy requirements owned by different teams.</dd>
+          <dt>What I did</dt><dd>Diagnosed a configuration issue that was hiding the new payment method from users, and wrote playbooks so support and engineering could move faster. When a policy requirement wasn't supported by the platform, I designed the change and drafted it in the core payments UI. When reviews showed it was a cross-platform concern, I handed long-term ownership to the core team.</dd>
+          <dt>Result</dt><dd>Launch unblocked, and the root cause fixed for future payment-method launches.</dd>
+        </dl></div>
+      </details>
+      <details>
+        <summary><span class="org">Google<small>2019–2023</small></span><span class="what">Took 100+ data providers live on Google Maps across Australia, New Zealand and India</span><span class="out">1B+ users reached, 95% less onboarding effort</span><span class="plus" aria-hidden="true"></span></summary>
+        <div class="body"><dl>
+          <dt>Situation</dt><dd>Transit agencies, e-bike operators and business-listing providers each sent data in a different shape, and every onboarding was manual.</dd>
+          <dt>What I did</dt><dd>Scoped each integration with the provider's leadership. Architected pipelines for 500k+ e-bikes, 4M+ businesses and public transit schedules. Wrote custom JavaScript importers for transit agencies and automated onboarding in Python and Bash. After launch, I built monitoring with 50+ dashboards and abuse detection that cut listing spam by 40%.</dd>
+          <dt>Result</dt><dd>Partner data live for 1B+ monthly Maps users, with 95% less manual onboarding effort.</dd>
+        </dl></div>
+      </details>
+      <details>
+        <summary><span class="org">Meta<small>2023</small></span><span class="what">Launched Click-to-WhatsApp Ads with 10+ messaging partners in India</span><span class="out">+60% Cloud API adoption</span><span class="plus" aria-hidden="true"></span></summary>
+        <div class="body"><dl>
+          <dt>Situation</dt><dd>A strategic ads product depended on partners integrating a new Cloud API, and their integrations were stalling on complex edge cases.</dd>
+          <dt>What I did</dt><dd>Led the launch across product, engineering and sales. Went deep into partner integrations, and built the sample code, documentation and training the next partners needed.</dd>
+          <dt>Result</dt><dd>60% adoption uplift, 30% faster deployments, and 90% of complex partner issues resolved.</dd>
+        </dl></div>
+      </details>
+      <details>
+        <summary><span class="org">Grivy<small>2024–2025</small></span><span class="what">Built a first-party data platform for global CPG brands, with a Gemini assistant on top</span><span class="out">Featured by Google Cloud</span><span class="plus" aria-hidden="true"></span></summary>
+        <div class="body"><dl>
+          <dt>Situation</dt><dd>Brands needed online and in-store transaction data joined up to plan and measure campaigns.</dd>
+          <dt>What I did</dt><dd>As Director of Business Engineering, I built the platform on BigQuery and Looker, documented self-serve ingestion APIs, and added a RAG-based Gemini assistant for natural-language queries. I also wrote the guides that let partners in Indonesia onboard without engineering support.</dd>
+          <dt>Result</dt><dd>100+ brand campaigns and 4× faster campaign operations. <a href="https://cloud.google.com/customers/grivy">Read the Google Cloud customer story</a></dd>
+        </dl></div>
+      </details>
+    </div>
+  </section>
 
-	</body>
+  <section id="capabilities">
+    <div class="head">
+      <h2>Capabilities</h2>
+      <p>Credible with a partner's CTO in the morning, and debugging their payloads in the afternoon. I also build the AI tooling that takes the toil out of both.</p>
+    </div>
+    <div class="caps">
+      <div><h3>Customer</h3><p>Before any code is written</p><ul><li>Technical discovery and scoping</li><li>Launch blueprints across teams</li><li>Executive and partner stakeholders</li><li>Developer documentation</li><li>Technical training and enablement</li></ul></div>
+      <div><h3>Engineering</h3><p>Hands on the keyboard</p><ul><li>Python, JavaScript/Node, SQL, C++</li><li>Payments, REST APIs, OAuth, PGP</li><li>BigQuery, Spanner, MongoDB</li><li>CI and presubmit infrastructure</li><li>AI agents, Gemini and RAG</li></ul></div>
+      <div><h3>Operations</h3><p>After launch day</p><ul><li>Production debugging and incidents</li><li>Data pipelines and monitoring</li><li>Abuse and fraud detection</li><li>Onboarding automation</li><li>Product feedback into engineering</li></ul></div>
+    </div>
+  </section>
+
+  <section id="career">
+    <div class="head">
+      <h2>Career</h2>
+      <p>Eleven years building robots, then seven on the customer side of platform engineering. The robotics years are why I'm calm when a system is messy and the stakes are real.</p>
+    </div>
+    <ol class="career">
+      <li><span class="yr">2026 – now</span><span>Product Solutions Engineer, Payments</span><span class="co">Google</span></li>
+      <li><span class="yr">2024 – 2025</span><span>Director, Business Engineering</span><span class="co">Grivy</span></li>
+      <li><span class="yr">2023</span><span>Business Engineer</span><span class="co">Meta</span></li>
+      <li class="pivot"><span class="yr">2019 – 2023</span><span>Technical Solutions Consultant</span><span class="co">Google</span></li>
+      <li><span class="yr">2018 – 2019</span><span>Senior Robotics Developer</span><span class="co">Blue Ocean Robotics, Denmark</span></li>
+      <li><span class="yr">2015 – 2018</span><span>Principal Software Engineer</span><span class="co">SESTO Robotics</span></li>
+      <li><span class="yr">2015</span><span>Principal Autonomous Vehicle Engineer</span><span class="co">nuTonomy</span></li>
+      <li><span class="yr">2008 – 2014</span><span>Software and Research Engineer</span><span class="co">HOPE Technik, National University of Singapore</span></li>
+    </ol>
+    <p class="creds">MSc Mechatronics, National University of Singapore. <a href="https://patents.google.com/?inventor=Aswin+Thomas+ABRAHAM">Patents</a> and <a href="https://dblp.uni-trier.de/pers/hd/a/Abraham:Aswin_Thomas">publications</a> in robotics and AI. Code on <a href="https://github.com/aswinthomas">GitHub</a>.</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="box">
+      <div>
+        <h2>Have an integration that can't fail?</h2>
+        <p>I'm open to senior solutions, integration and forward-deployed engineering roles, and developer relations, where customers and code are both part of the job.</p>
+      </div>
+      <div class="btns">
+        <a class="btn primary" href="https://www.linkedin.com/in/aswinta/">Message me on LinkedIn</a>
+        <a class="btn" href="https://github.com/aswinthomas">GitHub</a>
+      </div>
+    </div>
+  </section>
+  </main>
+</div>
+<footer><div class="wrap"><span>© 2026 Aswin Thomas Abraham</span><span>Singapore</span></div></footer>
+
+<script>
+// Draw the schematic once, when it first scrolls into view.
+const sch=document.getElementById('schematic');
+if('IntersectionObserver' in window){
+  new IntersectionObserver((es,o)=>{es.forEach(e=>{if(e.isIntersecting){sch.classList.add('on');o.disconnect();}})},{threshold:.35}).observe(sch);
+}else sch.classList.add('on');
+</script>
+</body>
 </html>
