@@ -3,235 +3,305 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Aswin Thomas Abraham — Solutions & Integration Engineer</title>
-<meta name="description" content="Aswin Thomas Abraham is a customer-facing engineer who turns complex platforms into working integrations. 100+ partner integrations at Google and Meta, 18 years shipping software. Singapore.">
-<meta property="og:title" content="Aswin Thomas Abraham — Solutions & Integration Engineer">
-<meta property="og:description" content="I sit between the customer and the code: scoping the problem, building the integration, and staying until it works in production.">
+<title>Aswin Thomas Abraham, integration engineer</title>
+<meta name="description" content="I'm the engineer you bring in when an integration has to work: 100+ partner launches at Google and Meta, a data platform featured by Google Cloud, and 18 years of shipping software.">
+<meta property="og:title" content="Aswin Thomas Abraham, integration engineer">
+<meta property="og:description" content="Hand me the integration that has to work. Partner launches at Google and Meta, data pipelines for 1B+ users, robotics before that.">
 <meta property="og:image" content="https://aswindev.com/images/profile.jpg">
 <meta property="og:url" content="https://aswindev.com">
 <meta name="twitter:card" content="summary">
 <link rel="canonical" href="https://aswindev.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#f7f5f0; --surface:#ffffff; --ink:#1a1a17; --muted:#5e5c55; --line:#e2ded4;
-  --accent:#1f5c4a; --accent-soft:#e3eee9;
-  --serif:'Fraunces',Georgia,serif; --sans:'Inter',system-ui,sans-serif; --mono:'JetBrains Mono',ui-monospace,monospace;
-}
-@media (prefers-color-scheme:dark){
-  :root{--bg:#121311;--surface:#1a1c19;--ink:#ecebe6;--muted:#a3a198;--line:#2c2e2a;--accent:#7fc4a8;--accent-soft:#1d2b25;}
+  --cobalt:#2433D6; --cobalt-deep:#18239E; --signal:#9FE7F5;
+  --ink:#0E1330; --paper:#F6F7FB; --white:#FFFFFF; --muted:#4A5070; --line:#C9CEE6; --rail:#8A93B8;
+  --display:'Bricolage Grotesque',system-ui,sans-serif; --body:'IBM Plex Sans',system-ui,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+body{background:var(--paper);color:var(--ink);font:400 18px/1.6 var(--body);-webkit-font-smoothing:antialiased}
 a{color:inherit}
-.wrap{max-width:960px;margin:0 auto;padding:0 24px}
-nav{display:flex;justify-content:space-between;align-items:center;padding:28px 0}
-nav .mark{font:600 15px var(--mono);text-decoration:none;letter-spacing:.02em}
-nav ul{display:flex;gap:24px;list-style:none;font-size:15px}
-nav ul a{text-decoration:none;color:var(--muted)}
-nav ul a:hover{color:var(--ink)}
-.hero{padding:72px 0 88px;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center}
-.eyebrow{font:500 13px var(--mono);color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:20px}
-h1{font:500 clamp(36px,5.6vw,60px)/1.08 var(--serif);letter-spacing:-.02em;margin-bottom:24px}
-h1 em{font-style:italic;color:var(--accent)}
-.lede{font-size:19px;color:var(--muted);max-width:56ch;margin-bottom:32px}
-.cta{display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-block;padding:12px 20px;border-radius:6px;font:500 15px var(--sans);text-decoration:none;border:1px solid var(--ink)}
-.btn.primary{background:var(--ink);color:var(--bg)}
-.btn:hover{opacity:.85}
-.portrait{width:200px;height:200px;border-radius:50%;object-fit:cover;filter:grayscale(.2)}
-section{padding:72px 0;border-top:1px solid var(--line)}
-h2{font:500 32px/1.2 var(--serif);letter-spacing:-.01em;margin-bottom:12px}
-.sub{color:var(--muted);max-width:60ch;margin-bottom:40px}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:0 0 64px}
-.stats strong{display:block;font:500 36px/1.1 var(--serif);color:var(--accent)}
-.stats span{font-size:14px;color:var(--muted)}
-.loop{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
-.loop div{background:var(--surface);padding:22px 18px}
-.loop b{display:block;font:500 12px var(--mono);color:var(--accent);margin-bottom:8px}
-.loop h3{font:600 16px var(--sans);margin-bottom:6px}
-.loop p{font-size:14px;color:var(--muted);line-height:1.5}
-.case{display:grid;grid-template-columns:200px 1fr;gap:32px;padding:36px 0;border-bottom:1px solid var(--line)}
-.case:last-child{border-bottom:0}
-.case .meta{font:400 13px/1.6 var(--mono);color:var(--muted)}
-.case .meta strong{display:block;color:var(--ink);font-weight:500}
-.case h3{font:500 24px/1.25 var(--serif);margin-bottom:14px}
-.case dl{display:grid;grid-template-columns:90px 1fr;gap:8px 16px;font-size:16px}
-.case dt{font:500 12px/2 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
-.metric{display:inline-block;margin-top:16px;padding:6px 12px;background:var(--accent-soft);color:var(--accent);border-radius:4px;font:500 14px var(--mono)}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:24px}
-.card h3{font:600 16px var(--sans);margin-bottom:10px}
-.card ul{list-style:none;font-size:15px;color:var(--muted)}
-.card li{padding:3px 0}
-.roles{display:flex;flex-wrap:wrap;gap:10px}
-.roles span{padding:8px 14px;border:1px solid var(--line);border-radius:999px;font-size:15px;background:var(--surface)}
-.timeline{list-style:none}
-.timeline li{display:grid;grid-template-columns:200px 1fr;gap:32px;padding:16px 0;border-bottom:1px solid var(--line)}
-.timeline .org{font:500 14px var(--mono);color:var(--muted)}
-.timeline h3{font:600 17px var(--sans)}
-.timeline p{color:var(--muted);font-size:15px}
-.contact{text-align:center;padding:96px 0}
-.contact h2{font-size:clamp(30px,4.5vw,44px);margin-bottom:16px}
-.contact .cta{justify-content:center;margin-top:28px}
-footer{padding:32px 0;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;border-top:1px solid var(--line)}
-@media (max-width:820px){
-  .hero{grid-template-columns:1fr;padding:40px 0 64px}
-  .portrait{width:120px;height:120px;order:-1}
-  .loop{grid-template-columns:1fr}
-  .case,.timeline li{grid-template-columns:1fr;gap:12px}
-  .grid3{grid-template-columns:1fr}
-  .stats{grid-template-columns:1fr 1fr}
-  nav ul{gap:16px}
-  nav ul li.hide-sm{display:none}
+:focus-visible{outline:3px solid var(--signal);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+
+/* Hero */
+.hero{background:var(--cobalt);color:var(--white);overflow:hidden}
+.top{display:flex;justify-content:space-between;align-items:center;padding:28px 0}
+.name{font:700 18px var(--display);text-decoration:none;letter-spacing:-.01em}
+.top nav{display:flex;gap:28px;font-size:16px}
+.top nav a{text-decoration:none;opacity:.8}
+.top nav a:hover{opacity:1}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:40px;align-items:center;padding:48px 0 96px}
+h1{font:750 clamp(46px,7vw,92px)/.94 var(--display);font-variation-settings:'opsz' 96;letter-spacing:-.035em;margin-bottom:28px}
+.hero p{font-size:20px;line-height:1.55;max-width:34ch;opacity:.92;margin-bottom:36px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:15px 24px;border-radius:6px;font:600 16px var(--body);text-decoration:none;border:2px solid currentColor}
+.btn.solid{background:var(--white);color:var(--cobalt);border-color:var(--white)}
+.btn:hover{transform:translateY(-1px)}
+.diagram{width:100%;height:auto;display:block}
+.diagram text{font:500 15px var(--body);fill:#fff}
+.diagram .in{fill:none;stroke:rgba(255,255,255,.55);stroke-width:2}
+.diagram .out{fill:none;stroke:var(--signal);stroke-width:3}
+.diagram .draw{stroke-dasharray:var(--len);stroke-dashoffset:var(--len);animation:draw 1.4s cubic-bezier(.6,0,.2,1) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.diagram .hub{fill:var(--white)}
+.diagram .hub-text{font:700 15px var(--display);fill:var(--cobalt)}
+.diagram .lit{opacity:0;animation:fade .5s ease forwards}
+@keyframes fade{to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.diagram .draw{animation:none;stroke-dashoffset:0}.diagram .lit{animation:none;opacity:1}}
+
+/* Sections */
+section{padding:112px 0}
+h2{font:700 clamp(34px,4.6vw,56px)/1.02 var(--display);letter-spacing:-.03em;max-width:18ch;margin-bottom:20px}
+.intro{color:var(--muted);font-size:20px;max-width:52ch;margin-bottom:64px}
+
+/* Problems */
+.problem{display:grid;grid-template-columns:5fr 7fr;gap:56px;padding:40px 0;border-top:2px solid var(--ink)}
+.problem h3{font:650 clamp(24px,2.6vw,32px)/1.12 var(--display);letter-spacing:-.02em}
+.problem .who{display:block;margin-top:14px;font-size:15px;color:var(--muted)}
+.proof p{max-width:60ch}
+.proof .fig{display:flex;align-items:baseline;gap:14px;margin-top:20px}
+.proof .fig b{font:750 52px/1 var(--display);letter-spacing:-.03em;color:var(--cobalt)}
+.proof .fig span{font-size:15px;color:var(--muted);max-width:26ch;line-height:1.4}
+.proof a{color:var(--cobalt);font-weight:600}
+
+/* Toolkit */
+.kit{background:var(--white)}
+.kit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:48px}
+.kit h3{font:650 22px/1.2 var(--display);margin-bottom:8px}
+.kit .note{color:var(--muted);font-size:16px;margin-bottom:18px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none}
+.chips li{padding:7px 14px;border:1.5px solid var(--line);border-radius:999px;font-size:15px}
+
+/* Route */
+.route{list-style:none;display:grid;grid-template-columns:repeat(6,1fr);position:relative;margin-top:24px}
+.route li{position:relative;padding:44px 16px 0 0}
+.route li::before{content:"";position:absolute;top:10px;left:0;right:0;height:6px;background:var(--rail)}
+.route li.cx::before{background:var(--cobalt)}
+.route li::after{content:"";position:absolute;top:2px;left:0;width:22px;height:22px;border-radius:50%;background:var(--paper);border:5px solid var(--rail)}
+.route li.cx::after{border-color:var(--cobalt)}
+.route li.xfer::after{width:30px;height:30px;top:-2px;left:-4px;border-color:var(--ink);border-width:6px}
+.route li:last-child::before{right:auto;width:22px}
+.route .yr{font:700 15px var(--display);color:var(--muted)}
+.route h3{font:650 19px/1.2 var(--display);margin:4px 0 6px}
+.route p{font-size:15px;color:var(--muted);line-height:1.45}
+.legend{display:flex;gap:28px;font-size:15px;color:var(--muted);margin-top:48px;flex-wrap:wrap}
+.legend i{display:inline-block;width:28px;height:6px;vertical-align:middle;margin-right:8px;background:var(--rail)}
+.legend i.cx{background:var(--cobalt)}
+.creds{margin-top:20px;font-size:16px;color:var(--muted)}
+.creds a{color:var(--cobalt);font-weight:600}
+
+/* Contact */
+.contact{background:var(--ink);color:var(--white);padding:120px 0}
+.contact-grid{display:grid;grid-template-columns:260px 1fr;gap:64px;align-items:center}
+.me{width:260px;height:260px;object-fit:cover;object-position:50% 30%;border-radius:50%;border:6px solid var(--signal)}
+.contact h2{max-width:16ch;font-size:clamp(40px,6vw,76px)}
+.contact p{font-size:20px;opacity:.85;max-width:50ch;margin-bottom:36px}
+.contact .btn.solid{background:var(--signal);border-color:var(--signal);color:var(--ink)}
+footer{background:var(--ink);color:rgba(255,255,255,.6);font-size:14px;padding:0 0 40px}
+footer .wrap{display:flex;justify-content:space-between;border-top:1px solid rgba(255,255,255,.15);padding-top:24px}
+
+@media (max-width:900px){
+  .wrap{padding:0 20px}
+  .hero-grid{grid-template-columns:1fr;padding:24px 0 64px}
+  .diagram text{font-size:21px}
+  .diagram{margin:0 -8px}
+  .top nav a.opt{display:none}
+  section{padding:80px 0}
+  .problem{grid-template-columns:1fr;gap:20px}
+  .kit-grid{grid-template-columns:1fr;gap:40px}
+  .contact-grid{grid-template-columns:1fr;gap:32px}
+  .me{width:160px;height:160px}
+  .route{grid-template-columns:1fr}
+  .route li{padding:0 0 32px 48px}
+  .route li::before{top:0;bottom:0;left:8px;right:auto;width:6px;height:auto}
+  .route li:last-child::before{display:none}
+  .route li::after{top:0}
+  .route li.xfer::after{top:-4px;left:-4px}
 }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <nav>
-    <a class="mark" href="#">aswin.dev</a>
-    <ul>
-      <li><a href="#approach">Approach</a></li>
-      <li><a href="#work">Work</a></li>
-      <li class="hide-sm"><a href="#background">Background</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
 
-  <header class="hero">
-    <div>
-      <p class="eyebrow">Solutions · Integration · Forward-deployed engineering</p>
-      <h1>I turn complex platforms into <em>integrations that actually ship.</em></h1>
-      <p class="lede">I'm Aswin Thomas Abraham. I spent eight years building robots and autonomous vehicles, then moved to the customer side of engineering. Since then I've onboarded 100+ partners onto Google Maps, launched WhatsApp ads APIs with Meta's partners, and built a data platform that Google Cloud wrote a case study about. I scope the problem with the customer, write the code, and stay through launch.</p>
-      <div class="cta">
-        <a class="btn primary" href="https://www.linkedin.com/in/aswinta/">Talk to me on LinkedIn</a>
-        <a class="btn" href="https://github.com/aswinthomas">See my code</a>
-      </div>
+<header class="hero">
+  <div class="wrap">
+    <div class="top">
+      <a class="name" href="#">Aswin Abraham</a>
+      <nav aria-label="Sections">
+        <a href="#problems">What I fix</a>
+        <a class="opt" href="#toolkit">Toolkit</a>
+        <a class="opt" href="#route">Route</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
-    <img class="portrait" src="images/profile.jpg" alt="Portrait of Aswin Thomas Abraham" width="200" height="200">
-  </header>
-
-  <div class="stats">
-    <div><strong>100+</strong><span>partners and data providers launched</span></div>
-    <div><strong>1B+</strong><span>Maps users reached by pipelines I built</span></div>
-    <div><strong>−95%</strong><span>manual onboarding effort, through automation</span></div>
-    <div><strong>18 yrs</strong><span>shipping software, robotics to APIs</span></div>
+    <div class="hero-grid">
+      <div>
+        <h1>Hand me the integration that has to work.</h1>
+        <p>I sit between your customers' messy systems and your platform. I scope it with their engineers, write the code, and stay until it's live and quiet in production.</p>
+        <div class="btns">
+          <a class="btn solid" href="#contact">Bring me a problem</a>
+          <a class="btn" href="#problems">See what I've fixed</a>
+        </div>
+      </div>
+      <svg class="diagram" viewBox="0 0 600 460" role="img" aria-label="Diagram: six different partner systems with tangled connections pass through one engineer and come out as three clean lines into production.">
+        <g id="inputs">
+          <path class="in draw" style="--len:420;animation-delay:.1s" d="M120,50 C230,380 220,120 300,230"/>
+          <path class="in draw" style="--len:420;animation-delay:.2s" d="M120,120 C250,330 160,60 300,230"/>
+          <path class="in draw" style="--len:420;animation-delay:.3s" d="M120,190 C210,40 250,400 300,230"/>
+          <path class="in draw" style="--len:420;animation-delay:.4s" d="M120,260 C240,420 180,90 300,230"/>
+          <path class="in draw" style="--len:420;animation-delay:.5s" d="M120,330 C200,60 260,330 300,230"/>
+          <path class="in draw" style="--len:420;animation-delay:.6s" d="M120,400 C260,240 170,380 300,230"/>
+        </g>
+        <g text-anchor="end">
+          <text x="110" y="54">Transit feeds</text>
+          <text x="110" y="124">POS exports</text>
+          <text x="110" y="194">Ads APIs</text>
+          <text x="110" y="264">Legacy ERP</text>
+          <text x="110" y="334">Webhooks</text>
+          <text x="110" y="404">Partner CSVs</text>
+        </g>
+        <g id="outputs">
+          <path class="out draw" style="--len:260;animation-delay:1.5s" d="M372,230 C410,230 410,170 450,170 L590,170"/>
+          <path class="out draw" style="--len:260;animation-delay:1.6s" d="M372,230 L590,230"/>
+          <path class="out draw" style="--len:260;animation-delay:1.7s" d="M372,230 C410,230 410,290 450,290 L590,290"/>
+        </g>
+        <defs><clipPath id="face"><circle cx="322" cy="230" r="44"/></clipPath></defs>
+        <circle class="hub" cx="322" cy="230" r="50"/>
+        <image href="images/profile.jpg" x="268" y="168" width="110" height="114" clip-path="url(#face)" preserveAspectRatio="xMidYMid slice"/>
+        <text x="322" y="304" text-anchor="middle" style="font-weight:600">Me</text>
+        <g class="lit" style="animation-delay:2.2s">
+          <text x="590" y="152" text-anchor="end">Live in production</text>
+          <text x="590" y="320" text-anchor="end" style="fill:var(--signal)">Monitored, documented</text>
+        </g>
+      </svg>
+    </div>
   </div>
+</header>
 
-  <section id="approach">
-    <h2>How I work with customers</h2>
-    <p class="sub">Most integrations don't fail on the code. They fail between the code and the people using it. I own the whole loop, so nothing gets lost in a handoff.</p>
-    <div class="loop">
-      <div><b>01</b><h3>Discover</h3><p>Sit with the partner's CTO and team to find the outcome behind the request.</p></div>
-      <div><b>02</b><h3>Architect</h3><p>Design to their real constraints: data, security, legacy systems, team size.</p></div>
-      <div><b>03</b><h3>Build</h3><p>Write the importers, pipelines and sample code myself.</p></div>
-      <div><b>04</b><h3>Launch</h3><p>Run the launch, debug live issues, monitor in production.</p></div>
-      <div><b>05</b><h3>Scale</h3><p>Turn fixes into automation, docs and enablement so the next partner self-serves.</p></div>
-    </div>
-  </section>
+<main>
+<section id="problems">
+  <div class="wrap">
+    <h2>The problems I get brought in for</h2>
+    <p class="intro">You probably have one of these right now. I've solved each of them at scale, for real partners, with my own code.</p>
 
-  <section id="work">
-    <h2>Selected work</h2>
-    <p class="sub">Each one combined customer conversations with code I wrote.</p>
-
-    <article class="case">
-      <div class="meta"><strong>Google</strong>Maps & Business Profile<br>2019 – 2023</div>
-      <div>
-        <h3>Onboarding 100+ data providers onto Google Maps</h3>
-        <dl>
-          <dt>Problem</dt><dd>Transit agencies, e-bike operators and business-listing providers across Australia, New Zealand and India each sent data in a different shape, and every onboarding was manual.</dd>
-          <dt>Built</dt><dd>Worked directly with providers' leadership to scope each integration. I architected the pipelines (500k+ e-bikes, 4M+ business listings, public transit schedules), wrote custom JavaScript importers for transit agencies, and automated onboarding with Python and Bash.</dd>
-          <dt>Impact</dt><dd>Data live for 1B+ monthly Maps users. Manual onboarding effort cut by 95%.</dd>
-        </dl>
-        <span class="metric">−95% onboarding effort</span>
+    <div class="problem">
+      <div><h3>Every partner onboarding takes weeks of engineering time.</h3><span class="who">Google Maps, 2019–2023</span></div>
+      <div class="proof">
+        <p>Transit agencies, e-bike operators and listing providers across Australia, New Zealand and India each sent data in a different shape. I worked with their leadership to scope each feed, wrote custom JavaScript importers, and automated onboarding with Python and Bash. That brought 100+ providers onto Maps, including 500k+ e-bikes and 4M+ businesses.</p>
+        <div class="fig"><b>−95%</b><span>manual onboarding effort, with data live for 1B+ monthly users</span></div>
       </div>
-    </article>
-
-    <article class="case">
-      <div class="meta"><strong>Meta</strong>WhatsApp Business · India<br>2023</div>
-      <div>
-        <h3>Launching Click-to-WhatsApp Ads with messaging partners</h3>
-        <dl>
-          <dt>Problem</dt><dd>Messaging partners were slow to adopt the Click-to-WhatsApp Cloud API, and integrations stalled on complex edge cases.</dd>
-          <dt>Built</dt><dd>Led the launch for 10+ partners in India with product, engineering and sales. I went deep on partners' integration issues and wrote the sample code, docs and training the next partners needed.</dd>
-          <dt>Impact</dt><dd>60% adoption uplift. Deployment time down 30%. 90% of complex partner issues resolved.</dd>
-        </dl>
-        <span class="metric">+60% API adoption</span>
-      </div>
-    </article>
-
-    <article class="case">
-      <div class="meta"><strong>Grivy</strong>Retail martech · SEA<br>2024 – 2025</div>
-      <div>
-        <h3>A first-party data platform, with a Gemini assistant on top</h3>
-        <dl>
-          <dt>Problem</dt><dd>Global CPG brands needed online and offline (retail transaction) data in one place to run and measure campaigns.</dd>
-          <dt>Built</dt><dd>As Director of Business Engineering, I built the platform on BigQuery and Looker, documented ingestion APIs for brands, and added a Gemini chatbot (RAG) for natural-language queries. I also wrote the guides and API recipes that let partners in Indonesia onboard without engineering.</dd>
-          <dt>Impact</dt><dd>100+ brand campaigns, tens of millions of users' data, 4× faster campaign operations. <a href="https://cloud.google.com/customers/grivy">Featured as a Google Cloud customer story →</a></dd>
-        </dl>
-        <span class="metric">Google Cloud case study</span>
-      </div>
-    </article>
-
-    <article class="case">
-      <div class="meta"><strong>Google</strong>Post-launch & developer experience</div>
-      <div>
-        <h3>Keeping integrations healthy after launch</h3>
-        <dl>
-          <dt>Problem</dt><dd>Once partners were live, problems showed up as bad listings, spam and a steady stream of support questions.</dd>
-          <dt>Built</dt><dd>ML-based monitoring (50+ dashboards, 100k+ lines of SQL), abuse-detection workflows, and a docs pipeline that generated 100+ pages of Business Profile API guides.</dd>
-          <dt>Impact</dt><dd>Spam on business listings down 40%, faster incident detection, and fewer support requests.</dd>
-        </dl>
-        <span class="metric">−40% listing spam</span>
-      </div>
-    </article>
-  </section>
-
-  <section>
-    <h2>What I bring</h2>
-    <p class="sub">Deep enough to debug your pipeline, clear enough to explain it to your CMO.</p>
-    <div class="grid3">
-      <div class="card"><h3>Technical depth</h3><ul><li>Python, JavaScript/Node, SQL, C++</li><li>REST APIs, OAuth, webhooks</li><li>BigQuery, Spanner, MongoDB, Firestore</li><li>GCP & AWS · Looker</li><li>LLM apps: Gemini, RAG</li></ul></div>
-      <div class="card"><h3>Customer-facing</h3><ul><li>Technical discovery with CTOs</li><li>Solution architecture</li><li>Partner launches across APAC</li><li>Deep-dive debugging & escalations</li><li>Technical training</li></ul></div>
-      <div class="card"><h3>Scale & enablement</h3><ul><li>Onboarding automation</li><li>Developer docs & API guides</li><li>Sample code & reference integrations</li><li>Monitoring & dashboards</li><li>Product feedback to engineering</li></ul></div>
     </div>
-  </section>
 
-  <section>
-    <h2>Roles I'm built for</h2>
-    <p class="sub">Anywhere the job is part engineer, part trusted advisor.</p>
-    <div class="roles">
-      <span>Solutions Engineer</span><span>Integration Engineer</span><span>Post-launch / Customer Engineer</span><span>Forward Deployed Engineer</span><span>Developer Relations</span><span>Solutions Architect</span>
+    <div class="problem">
+      <div><h3>Your big API launch is stalled at the partners.</h3><span class="who">Meta, WhatsApp Business, 2023</span></div>
+      <div class="proof">
+        <p>Click-to-WhatsApp Ads needed messaging partners in India to integrate a new Cloud API, and their integrations were stuck on hard edge cases. I led the launch for 10+ partners, got into their code to resolve 90% of the complex issues, and wrote the sample code and training that cut deployment time by 30%.</p>
+        <div class="fig"><b>+60%</b><span>adoption of the Click-to-WhatsApp Cloud API</span></div>
+      </div>
     </div>
-  </section>
 
-  <section id="background">
-    <h2>Background</h2>
-    <p class="sub">I started in robotics and moved toward the customer. That gives me patience for messy real-world systems.</p>
-    <ul class="timeline">
-      <li><span class="org">Google · 2026 –</span><div><h3>Product Solutions Engineer</h3><p>Partner integrations, back at Google.</p></div></li>
-      <li><span class="org">Grivy · 2024 – 2025</span><div><h3>Director, Business Engineering</h3><p>Solutions engineering and data platform for retail and CPG brands.</p></div></li>
-      <li><span class="org">Meta · 2023</span><div><h3>Business Engineer</h3><p>WhatsApp Business and Click-to-WhatsApp partner integrations.</p></div></li>
-      <li><span class="org">Google · 2019 – 2023</span><div><h3>Technical Solutions Consultant</h3><p>Google Maps data providers and the Business Profile API.</p></div></li>
-      <li><span class="org">2008 – 2019</span><div><h3>Robotics & autonomous vehicles</h3><p>Blue Ocean Robotics (Denmark), SESTO Robotics, nuTonomy, HOPE Technik and NUS. I led software teams and delivered 50+ client robotics projects across Europe and APAC.</p></div></li>
-      <li><span class="org">Education</span><div><h3>MSc Mechatronics, National University of Singapore</h3><p>BEng Electronics. <a href="https://dblp.uni-trier.de/pers/hd/a/Abraham:Aswin_Thomas">Publications</a> and <a href="https://patents.google.com/?inventor=Aswin+Thomas+ABRAHAM">patents</a> in robotics and AI.</p></div></li>
-    </ul>
-  </section>
-
-  <section id="contact" class="contact">
-    <h2>Have a hard integration problem?</h2>
-    <p class="sub" style="margin:0 auto">I'm always glad to talk about solutions, integration and forward-deployed roles, especially ones that put me in front of customers.</p>
-    <div class="cta">
-      <a class="btn primary" href="https://www.linkedin.com/in/aswinta/">Message me on LinkedIn</a>
-      <a class="btn" href="https://github.com/aswinthomas">GitHub</a>
+    <div class="problem">
+      <div><h3>Your customers' data lives in ten places and nobody trusts the numbers.</h3><span class="who">Grivy, retail and CPG brands, 2024–2025</span></div>
+      <div class="proof">
+        <p>Brands needed online and in-store transaction data joined up to run campaigns. I built the platform on BigQuery and Looker, documented ingestion APIs brands could self-serve, and added a Gemini chatbot (RAG) so teams could ask questions in plain English. <a href="https://cloud.google.com/customers/grivy">Google Cloud published it as a customer story.</a></p>
+        <div class="fig"><b>100+</b><span>brand campaigns run on it, with 4× faster campaign ops</span></div>
+      </div>
     </div>
-  </section>
 
-  <footer><span>© 2026 Aswin Thomas Abraham</span><span>Singapore</span></footer>
-</div>
+    <div class="problem">
+      <div><h3>It launched, and now it's breaking quietly.</h3><span class="who">Google Business Profile, post-launch</span></div>
+      <div class="proof">
+        <p>After launch, partner data degrades, spam creeps in and support tickets pile up. I built ML-based monitoring (50+ dashboards, 100k+ lines of SQL), abuse-detection workflows, and a docs pipeline that generated 100+ pages of API guides, so developers stopped needing to ask.</p>
+        <div class="fig"><b>−40%</b><span>spam on business listings</span></div>
+      </div>
+    </div>
+
+    <div class="problem">
+      <div><h3>The hardware and software have to work in the physical world.</h3><span class="who">Robotics and autonomous vehicles, 2008–2019</span></div>
+      <div class="proof">
+        <p>Before platforms, I built robots. I led software for 30+ robotics deployments across APAC, delivered navigation for 20+ clients in Europe that cut their operating costs by 60%, and worked on autonomous vehicles at nuTonomy. I'm used to systems where "it works on my machine" doesn't count.</p>
+        <div class="fig"><b>3×</b><span>software team grown and mentored at SESTO Robotics</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="toolkit" class="kit">
+  <div class="wrap">
+    <h2>What I bring to the room</h2>
+    <p class="intro">I'm comfortable in a CTO's meeting room and in your production logs, often on the same day.</p>
+    <div class="kit-grid">
+      <div>
+        <h3>Find the real problem</h3>
+        <p class="note">Before anyone writes code.</p>
+        <ul class="chips"><li>Technical discovery</li><li>Solution architecture</li><li>Executive stakeholders</li><li>Scoping and trade-offs</li><li>Technical training</li><li>Product feedback loops</li></ul>
+      </div>
+      <div>
+        <h3>Build it</h3>
+        <p class="note">Hands on the keyboard.</p>
+        <ul class="chips"><li>Python</li><li>JavaScript / Node</li><li>SQL</li><li>C++</li><li>REST, OAuth, webhooks</li><li>BigQuery</li><li>Spanner</li><li>MongoDB / Firestore</li><li>GCP and AWS</li><li>Gemini, RAG</li><li>Android / Kotlin</li><li>React</li></ul>
+      </div>
+      <div>
+        <h3>Keep it alive</h3>
+        <p class="note">After launch day, when it counts.</p>
+        <ul class="chips"><li>Monitoring and alerting</li><li>Looker dashboards</li><li>Incident debugging</li><li>Abuse detection</li><li>Onboarding automation</li><li>Developer docs</li><li>Sample code</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="route">
+  <div class="wrap">
+    <h2>How I got here</h2>
+    <p class="intro">Eleven years building robots, then a switch to the customer side. The robotics years are why I don't panic when a system is messy and real.</p>
+    <ol class="route">
+      <li><span class="yr">2008</span><h3>Robotics research</h3><p>National University of Singapore, then HOPE Technik</p></li>
+      <li><span class="yr">2015</span><h3>Autonomy and robots</h3><p>nuTonomy, then principal engineer at SESTO Robotics</p></li>
+      <li><span class="yr">2018</span><h3>Senior robotics developer</h3><p>Blue Ocean Robotics, Denmark</p></li>
+      <li class="cx xfer"><span class="yr">2019</span><h3>Google</h3><p>Technical Solutions Consultant, Maps and Business Profile</p></li>
+      <li class="cx"><span class="yr">2023</span><h3>Meta, then Grivy</h3><p>Business Engineer at Meta; Director of Business Engineering at Grivy</p></li>
+      <li class="cx"><span class="yr">2026</span><h3>Back at Google</h3><p>Product Solutions Engineer</p></li>
+    </ol>
+    <div class="legend"><span><i></i>Building systems</span><span><i class="cx"></i>Building systems with customers</span></div>
+    <p class="creds">MSc Mechatronics, NUS. <a href="https://patents.google.com/?inventor=Aswin+Thomas+ABRAHAM">Patents</a> and <a href="https://dblp.uni-trier.de/pers/hd/a/Abraham:Aswin_Thomas">publications</a> in robotics and AI. Code on <a href="https://github.com/aswinthomas">GitHub</a>.</p>
+  </div>
+</section>
+</main>
+
+<section id="contact" class="contact">
+  <div class="wrap contact-grid">
+    <img class="me" src="images/profile.jpg" alt="Aswin Thomas Abraham" width="425" height="441" loading="lazy">
+    <div>
+    <h2>Got a problem that can't fail?</h2>
+    <p>I'm open to conversations about solutions engineering, integration and forward-deployed roles, and developer relations. If you need someone your customers will trust and your engineers will respect, let's talk.</p>
+    <div class="btns">
+      <a class="btn solid" href="https://www.linkedin.com/in/aswinta/">Message me on LinkedIn</a>
+      <a class="btn" href="https://github.com/aswinthomas">Read my code on GitHub</a>
+    </div>
+    </div>
+  </div>
+</section>
+<footer><div class="wrap"><span>© 2026 Aswin Thomas Abraham</span><span>Singapore</span></div></footer>
+
+<script>
+// Data pulses travel through the diagram after it draws. Skipped when reduced motion is requested.
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
+  const svg=document.querySelector('.diagram'),NS='http://www.w3.org/2000/svg';
+  const ins=[...svg.querySelectorAll('#inputs path')],outs=[...svg.querySelectorAll('#outputs path')];
+  function pulse(path,color,r,dur,delay){
+    const c=document.createElementNS(NS,'circle');c.setAttribute('r',r);c.setAttribute('fill',color);c.setAttribute('opacity','0');
+    svg.insertBefore(c,svg.querySelector('.hub'));
+    const len=path.getTotalLength();let t0=null;
+    function step(ts){if(!t0)t0=ts;const p=((ts-t0)/dur)%1;const pt=path.getPointAtLength(p*len);
+      c.setAttribute('cx',pt.x);c.setAttribute('cy',pt.y);c.setAttribute('opacity',p<.05||p>.95?'0':'1');requestAnimationFrame(step);}
+    setTimeout(()=>requestAnimationFrame(step),delay);
+  }
+  ins.forEach((p,i)=>pulse(p,'rgba(255,255,255,.85)',3,2600+i*230,2200+i*400));
+  outs.forEach((p,i)=>pulse(p,'#9FE7F5',4.5,1500,2600+i*500));
+}
+</script>
 </body>
 </html>
